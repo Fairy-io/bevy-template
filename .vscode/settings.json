@@ -1,5 +1,5 @@
 {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "rust-analyzer.cargo.features": []
+    "rust-analyzer.cargo.features": ["dev"]
 }
