@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 
 #[cfg(not(feature = "dev"))]
-pub use lib::*;
+use lib::startup_system::startup;
 
 #[cfg(feature = "dev")]
 #[hot_lib_reloader::hot_module(dylib = "lib")]
@@ -21,7 +21,16 @@ mod hot_lib {
 }
 
 #[cfg(feature = "dev")]
-pub use hot_lib::*;
+use hot_lib::*;
+
+#[cfg(feature = "dev")]
+pub use hot_lib::startup;
+
+#[cfg(feature = "dev")]
+pub use hot_lib::Despawnable;
+
+#[cfg(feature = "dev")]
+pub use hot_lib::was_updated;
 
 pub struct GamePlugin;
 
