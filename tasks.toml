@@ -1,0 +1,5 @@
+[tasks.app]
+command = "cargo watch -w src -x \"run --features \\\"dev\\\"\""
+
+[tasks.lib]
+command = "cargo watch -w lib -x \"build -p lib\""
