@@ -1,5 +1,7 @@
+use bevy::prelude::*;
+
 #[cfg(not(feature = "dev"))]
-pub use lib::startup_system::startup;
+pub use lib::*;
 
 #[cfg(feature = "dev")]
 #[hot_lib_reloader::hot_module(dylib = "lib")]
@@ -20,3 +22,11 @@ mod hot_lib {
 
 #[cfg(feature = "dev")]
 pub use hot_lib::*;
+
+pub struct GamePlugin;
+
+impl Plugin for GamePlugin {
+    fn build(&self, app: &mut App) {
+        app.add_systems(Startup, startup);
+    }
+}

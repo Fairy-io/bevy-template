@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use bevy_template::plugins::{
-    base_plugin::BasePlugin, dev_plugin::DevPlugin, game_plugin::startup,
+    base_plugin::BasePlugin, dev_plugin::DevPlugin, game_plugin::GamePlugin,
 };
 
 fn main() {
@@ -8,6 +8,6 @@ fn main() {
         .add_plugins(DefaultPlugins)
         .add_plugins(BasePlugin)
         .add_plugins(DevPlugin)
-        .add_systems(Startup, startup)
+        .add_plugins(GamePlugin)
         .run();
 }
