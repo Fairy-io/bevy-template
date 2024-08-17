@@ -1,12 +1,5 @@
-use bevy::prelude::*;
+mod components;
+mod systems;
 
-#[derive(Component)]
-pub struct Despawnable;
-
-#[no_mangle]
-pub fn startup(mut commands: Commands) {
-    commands.spawn((
-        TextBundle::from_section("Base plugin", TextStyle { ..default() }),
-        Despawnable {},
-    ));
-}
+pub use components::*;
+pub use systems::*;
