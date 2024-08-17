@@ -1,5 +1,6 @@
-use crate::plugins::game_plugin::*;
 use bevy::prelude::*;
+
+use crate::plugins::game_plugin::*;
 
 pub fn hot_reload(mut commands: Commands, query: Query<Entity, With<Despawnable>>) {
     let updated = was_updated();

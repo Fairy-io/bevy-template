@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+
 pub struct BasePlugin;
 
 fn setup(mut commands: Commands) {
