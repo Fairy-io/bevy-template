@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 
 #[cfg(not(feature = "dev"))]
-use lib::startup_system::startup;
+use lib::*;
 
 #[cfg(feature = "dev")]
 #[hot_lib_reloader::hot_module(dylib = "lib")]
