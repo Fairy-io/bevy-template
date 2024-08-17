@@ -11,7 +11,7 @@ mod hot_lib {
     #[lib_updated]
     pub fn was_updated() -> bool {}
 
-    pub use lib::Despawnable;
+    pub use lib::*;
 }
 
 #[cfg(feature = "dev")]
