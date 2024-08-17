@@ -20,8 +20,8 @@ mod hot_lib {
     pub use lib::*;
 }
 
-#[cfg(feature = "dev")]
-use hot_lib::*;
+// #[cfg(feature = "dev")]
+// use hot_lib::*;
 
 #[cfg(feature = "dev")]
 pub use hot_lib::startup;
