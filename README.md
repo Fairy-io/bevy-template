@@ -30,6 +30,7 @@ hot_functions_from_file!("lib/src/lib.rs");
 hot_functions_from_file!("lib/src/components/despawnable.rs");
 
 hot_functions_from_file!("lib/src/systems/startup_system.rs");
+hot_functions_from_file!("lib/src/systems/despawn_scene_system.rs")
 ```
 
 #### GamePlugin
